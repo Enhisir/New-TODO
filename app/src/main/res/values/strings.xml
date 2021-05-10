@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">New To-Do</string>
+    <string name="main_title">New To-Do</string>
+    <string name="process_button_title">В процессе</string>
+    <string name="done_button_title">Сделано</string>
+    <string name="failed_button_title">Просрочено</string>
+    <string name="subactivity_title">Задачи</string>
+    <string name="note_name_hint">Your note</string>
+    <string name="your_image_hint">Your image</string>
+    <string name="activity_item_name">Название</string>
+    <string name="activity_item_description">Содержание</string>
+    <string name="activity_item_status">Статус</string>
+    <string name="activity_item_name_hint">Название задачи</string>
+    <string name="activity_item_description_hint">Содержание задачи</string>
+    <string name="activity_item_has_date">Ограниченное время</string>
+    <string name="activity_item_important">Важное</string>
+    <string name="activity_item_date_hint">01.01.1970</string>
+    <string name="activity_item_save_button">Сохранить</string>
+    <string name="activity_item_delete_button">Удалить</string>
+    <string-array name="statuses">
+        <item>В процессе</item>
+        <item>Сделано</item>
+        <item>Просрочено</item>
+    </string-array>
+</resources>
