@@ -4,19 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:onClick="onSaveButtonClick"
     tools:context=".activities.ItemActivity">
-
-    <TextView
-        android:id="@+id/activityItemName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/activity_item_name"
-        android:textColor="@color/purple_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/activityItemNameText"
@@ -27,22 +17,11 @@
         android:layout_marginEnd="16dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/activity_item_name_hint"
+        android:hint="@string/activity_name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityItemName" />
-
-    <TextView
-        android:id="@+id/activityItemDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/activity_item_description"
-        android:textColor="@color/purple_700"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityItemNameText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/activityItemDescText"
@@ -55,12 +34,12 @@
         android:autofillHints=""
         android:ems="10"
         android:gravity="start|top"
-        android:hint="@string/activity_item_description_hint"
+        android:hint="@string/activity_description"
         android:inputType="textMultiLine"
         app:layout_constraintBottom_toTopOf="@+id/activityItemStatus"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityItemDescription" />
+        app:layout_constraintTop_toBottomOf="@+id/activityItemNameText" />
 
     <TextView
         android:id="@+id/activityItemStatus"
@@ -68,8 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/activity_item_status"
-        android:textColor="@color/purple_700"
+        android:text="@string/activity_status"
+        android:textColor="@color/main_color_dark"
         app:layout_constraintBottom_toTopOf="@+id/activityItemImpSwitch"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -90,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/activity_item_important"
-        android:textColor="@color/purple_700"
+        android:text="@string/activity_important"
+        android:textColor="@color/main_color_dark"
         app:layout_constraintBottom_toTopOf="@+id/activityItemDateSwitch"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -101,8 +80,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
-        android:text="@string/activity_item_has_date"
-        android:textColor="@color/purple_700"
+        android:text="@string/activity_has_date"
+        android:textColor="@color/main_color_dark"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -114,7 +93,7 @@
         android:layout_marginEnd="16dp"
         android:autofillHints=""
         android:ems="10"
-        android:hint="@string/activity_item_description_hint"
+        android:hint="@string/activity_date_hint"
         android:inputType="date"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/activityItemDateSwitch"
@@ -139,7 +118,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onSaveButtonClick"
-            android:text="@string/activity_item_save_button" />
+            android:text="@string/activity_save_button" />
 
         <Space
             android:layout_width="0dp"
@@ -151,7 +130,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onDeleteButtonClick"
-            android:text="@string/activity_item_delete_button" />
+            android:text="@string/activity_delete_button" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.roar.new_todo.ItemAdapter;
+import com.roar.new_todo.adapters.ItemAdapter;
 import com.roar.new_todo.R;
 import com.roar.new_todo.data.AppDatabase;
 import com.roar.new_todo.data.TaskDao;
@@ -29,6 +29,7 @@ public class DoneActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_done);
+        setTitle("Сделанные");
 
         db =  Room.databaseBuilder(
                 getApplicationContext(),

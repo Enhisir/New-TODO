@@ -1,4 +1,4 @@
-package com.roar.new_todo;
+package com.roar.new_todo.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.roar.new_todo.R;
 import com.roar.new_todo.model.Task;
 
 import java.text.DateFormat;
@@ -18,6 +19,7 @@ public class ItemAdapter extends ArrayAdapter<Task> {
     public ItemAdapter(Context context, ArrayList<Task> arr) {
         super(context, R.layout.adapter_item, arr.toArray(new Task[arr.size()]));
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
