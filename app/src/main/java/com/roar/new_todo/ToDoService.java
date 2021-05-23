@@ -7,6 +7,7 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.Build;
 import android.os.IBinder;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -15,8 +16,6 @@ import androidx.room.Room;
 import com.roar.new_todo.data.AppDatabase;
 import com.roar.new_todo.data.TaskDao;
 import com.roar.new_todo.model.Task;
-
-import java.util.ArrayList;
 
 public class ToDoService extends Service {
     public static final int SERVICE_ID = 1010;
@@ -62,6 +61,7 @@ public class ToDoService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.i("New TO-DO", "ToDoService is working!");
         AppDatabase db =  Room.databaseBuilder(
                 getApplicationContext(),
                 AppDatabase.class,
@@ -70,8 +70,7 @@ public class ToDoService extends Service {
                 .build();
         TaskDao taskDao = db.taskDao();
 
-        int number = (new ArrayList<>(taskDao.getByStatus(Task.ACTUAL))).size();
-        if (number > 0) {
+        if (!taskDao.getByStatus(Task.ACTUAL).isEmpty()) {
             builder.setContentText("У вас остались незавершенные задачи!");
             notificationManagerCompat.notify(notificationId++, builder.build());
 
